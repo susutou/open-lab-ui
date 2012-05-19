@@ -10,4 +10,3 @@ These UI files are used to implement several specific interfaces, including:
 - The main interface (index.html)
 - The interface of projects list display (project-list.html)
 - The interface for single project display (project-page.html)
-- The interface for user to review the status of their assignments (assign-status.html)
