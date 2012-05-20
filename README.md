@@ -3,7 +3,7 @@
 **open-lab-ui** is a set of files for the UI of my recent project **open-lab**.
 It is based on [Bootstrap](http://twitter.github.com/bootstrap/), and contains several HTML, CSS and JavaScript files.
 
-## Features
+# Components
 
 These UI files are used to implement several specific interfaces, including:
 
