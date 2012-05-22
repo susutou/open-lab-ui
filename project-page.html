@@ -41,10 +41,16 @@
 				text-align: right;
 			}
 			.desc {
-				margin-right: 10px;
+				margin: 5px 0;
 				font-weight: bold;
 			}
+			div.topic-item > p {
+				text-indent: 2em;
+			}
 		</style>
+		<script type="text/javascript"
+			src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 	</head>
 	<body>
 		<div class="navbar navbar-fixed-top">
@@ -89,9 +95,17 @@
 								<h2>实验内容</h2>
 								<div class="topic-list">
 									<div class="topic-item">
-										<h3>汉诺塔</h3>
-										<p><span class="desc">问题描述</span>这是一个很难很难的问题。</p>
-										<blockquote>据说，当汉诺塔完成，世界就要毁灭了。</blockquote>
+										<h3>背包问题的求解</h3>
+										<h4 class="desc">问题描述</h4>
+										<p>假设有一个能装入总体积为 \(T\) 的背包和 \(n\) 件体积分别为 \(w_1,w_2,\ldots w_n\) 的物品，能否从 \(n\) 件物品中挑选若干件恰好装满背包，即使 \(w_1+w_2+\ldots +w_m=T\)，要求找出所有满足上述条件的解。</p>
+										<p>例如：当 \(T=10\)，各件物品的体积 \(\{1,8,4,3,5,2\}\) 时，可找到下列 \(4\) 组解：</p>
+										<p>\[(1,4,3,2),(1,4,5),(8,2),(3,5,2)\]</p>
+										<h4 class="desc">实现提示</h4>
+										<p>可利用回溯法的设计思想来解决背包问题。首先，将物品排成一列，然后，顺序选取物品装入背包，若已选取第 \(i\) 件物品后未满，则继续选取第 \(i+1\) 件，若该件物品“太大”不能装入，则弃之，继续选取下一件，直至背包装满为止。</p>
+										<p>如果在剩余的物品中找不到合适的物品以填满背包，则说明“刚刚”装入的物品“不合适”，应将它取出“弃之一边”，继续再从“它之后”的物品中选取，如此重复，直到求得满足条件的解，或者无解。</p>
+										<p>由于回溯求解的规则是“后进先出”，自然要用到“栈”。</p>
+										<h4 class="desc">进一步考虑</h4>
+										<p>如果每件物品都有体积和价值，背包又有大小限制，求解背包中存放物品总价值最大的问题解——最优解或近似最优解。</p>
 										<div class="topic-tools">
 											<div class="btn-group">
 												<a class="btn btn-primary" href="#">提交作业</a>
@@ -100,9 +114,11 @@
 										</div>
 									</div>
 									<div class="topic-item">
-										<h3>八皇后问题</h3>
-										<p><span class="desc">问题描述</span>这是一个很难很难的问题。</p>
-										<blockquote>据说，皇后的脾气很差，会把同一行、同一列甚至同一对角线上的其他皇后吃掉。</blockquote>
+										<h3>约瑟夫环问题仿真</h3>
+										<h4 class="desc">问题描述</h4>
+										<p>设编号为 \(1,2,\ldots,n(n>0)\) 个人按顺时针方向围坐一圈，每人持有一个正整数密码。开始时任意给出一个报数上限 \(m\)，从第一个人开始顺时针方向自 \(1\) 起顺序报数，报到 \(m\) 时停止报数，报 \(m\) 的人出列，将他的密码作为新的 \(m\) 值，从他在顺时针方向上的下一个人起重新自 \(1\) 报数；如此下去直到所有人全部出列为止。</p>
+										<h4 class="desc">实现提示</h4>
+										<p>可考虑不带头结点的单链表结构。</p>
 										<div class="topic-tools">
 											<div class="btn-group">
 												<a class="btn btn-primary" href="#">提交作业</a>
