@@ -6,30 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css">
-		<style type="text/css">
-			body {
-				padding-top: 60px;
-			}
-			.activity-list {
-				background-color: #f5f5f5;
-				margin: 10px 0;
-				border: 1px solid #e9e9e9;
-				border-radius: 4px;
-			}
-			.activity-item {
-				padding: 8px 16px;
-				border-bottom: 1px solid #e9e9e9;
-			}
-			div.activity-item:hover {
-				background-color: #eeeeee;
-			}
-			div.activity-list :last-child {
-				border-bottom: none;
-			}
-			.button-wrapper-right {
-				text-align: right;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="assets/css/doc.css">
 	</head>
 	<body>
 		<div class="navbar navbar-fixed-top">
@@ -49,6 +26,29 @@
 								<a href="#">关于我们</a>
 							</li>
 						</ul>
+						<ul class="nav pull-right">
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+									<i class="icon-user-large"></i> Susen <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">
+											<div class="row-fluid account-group">
+												<div class="span4 avatar-container"><img alt="Susen" src="assets/img/avatar-demo.jpg" class="size32"></div>
+												<div class="span8"><strong>苏森</strong><span class="metadata">View Profiles</span></div>
+											</div>
+										</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<a href="#">Settings</a>
+									</li>
+									<li>
+										<a href="#">Sign out</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -61,7 +61,8 @@
 						<p>
 							这里显示您最近的活动。
 						</p>
-						<div class="alert alert-info">
+						<div class="alert alert-info fade in">
+							<button class="close" data-dismiss="alert">&times;</button>
 							您的项目 <a href="#">数据结构第一次上机实验</a> 正在进行中。
 						</div>
 						<div class="activity-list">
@@ -126,7 +127,7 @@
 					</section>
 				</div>
 				<div class="span4">
-					<div class="alert alert-success">
+					<div class="alert alert-block alert-success">
 							<h3>欢迎！</h3>
 							<p>您好，这里是数据结构开放实验平台。</p>
 							<p class="button-wrapper-right"><a href="#" class="btn btn-success">了解更多</a></p>
@@ -156,5 +157,12 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="bootstrap/js/jquery.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function () {
+			$('.dropdown-toggle').dropdown();
+		});
+		</script>
 	</body>
 </html>

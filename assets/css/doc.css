@@ -1,0 +1,122 @@
+/* set padding to escape the navbar */
+body {
+	padding-top: 60px;
+}
+
+/* styles for timeline */
+.activity-list {
+	background-color: #f5f5f5;
+	margin: 10px 0;
+	border: 1px solid #e9e9e9;
+	border-radius: 4px;
+}
+.activity-item {
+	padding: 8px 16px;
+	border-bottom: 1px solid #e9e9e9;
+}
+div.activity-item:hover {
+	background-color: #eeeeee;
+}
+div.activity-list :last-child {
+	border-bottom: none;
+}
+
+/* style to make the button right-aligned (safely, comparing to using float) */
+.button-wrapper-right {
+	text-align: right;
+}
+
+/* avatar of 32 times 32 */
+.size32 {
+	border-radius: 4px 4px 4px 4px;
+	height: 36px;
+	width: 36px;
+}
+
+/* style for account group */
+.metadata {
+	display: block;
+	font-size: 11px;
+	color: #999999;
+}
+a:hover .metadata {
+	color: #ffffff;
+}
+.account-group {
+	padding: 3px 0;
+}
+a:hover i.icon-user-large {
+	background-position: -120px -80px;
+}
+.icon-user-large {
+	background-image: url("../img/twitter_web_sprite_icons.png");
+	background-position: -120px -50px;
+	width: 21px;
+	height: 21px;
+	margin-top: -3px;
+}
+
+/* styles for project list */
+.project-list {
+	margin: 10px 0;
+	border: 1px solid #e9e9e9;
+	border-radius: 4px;
+}
+.project-item {
+	padding: 8px 16px;
+	border-bottom: 1px solid #e9e9e9;
+}
+div.project-item:hover {
+	background-color: #f5f5f5;
+}
+div.project-list :last-child {
+	border-bottom: none;
+}
+div.project-item > h3 > a {
+	display: block;
+	color: #000000;
+	text-decoration: none;
+}
+div.project-item > h3 > a:hover {
+	color: #005580;
+	text-decoration: underline;
+}
+
+/* styles for topic list */
+.topic-list {
+	margin: 10px 0;
+	border: 1px solid #e9e9e9;
+	border-radius: 4px;
+}
+.topic-item {
+	padding: 8px 16px;
+	border-bottom: 1px solid #e9e9e9;
+}
+div.topic-item:hover {
+	background-color: #f5f5f5;
+}
+div.topic-list > :last-child {
+	border-bottom: none;
+}
+div.topic-item > h3 > a {
+	display: block;
+	color: #000000;
+	text-decoration: none;
+}
+div.topic-item > h3 > a:hover {
+	color: #005580;
+	text-decoration: underline;
+}
+.button-wrapper-right {
+	text-align: right;
+}
+.desc {
+	margin: 5px 0;
+	font-weight: bold;
+}
+div.topic-item > p {
+	text-indent: 2em;
+}
+.content-wrapper {
+	margin: 10px 0;
+}
