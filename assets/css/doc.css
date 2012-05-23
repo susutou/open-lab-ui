@@ -118,5 +118,12 @@ div.topic-item > p {
 	text-indent: 2em;
 }
 .content-wrapper {
-	margin: 10px 0;
+	margin: 18px 0;
+}
+
+
+/* hidden */
+.display-hidden {
+	display: none;
+	margin-top: 18px;
 }

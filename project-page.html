@@ -59,19 +59,26 @@
 		<div class="container">
 			<div class="row">
 				<div class="span8">
-					<div id="experiment-list">
-						<div class="alert alert-info">
-							您需要完成这个项目。
-						</div>
+					<div id="project-info">
 						<h1>数据结构第一次上机实验</h1>
-						<div id="project-wrapper" class="content-wrapper">
+							<div id="project-wrapper" class="content-wrapper">
+								<div class="alert alert-info">
+								您需要完成这个项目。
+							</div>
 							<section id="project-purpose">
-								<h2>实验目的</h2>
-								<p>这里是实验目的。</p>
-							</section>
-							<section id="project-reqs">
-								<h2>实验要求</h2>
-								<p>这里是实验要求。</p>
+								<h2>实验安排</h2>
+								<table class="table table-striped table-bordered">
+									<thead>
+										<tr>
+											<th>#</th><th>实验时间</th><th>实验地点</th><th>指导老师</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td><td>2012-04-23 18:00</td><td>西一楼机房</td><td>赵仲孟</td>
+										</tr>
+									</tbody>
+								</table>
 							</section>
 							<section id="project-content">
 								<h2>实验内容</h2>
@@ -148,5 +155,12 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="bootstrap/js/jquery.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function () {
+			$('.dropdown-toggle').dropdown();
+		});
+		</script>
 	</body>
 </html>
