@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="utf-8">
+		<title>Projects · Open Labs</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/prettify.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/doc.css">
+	</head>
+	<body>
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+					<a class="brand" href="#">Open Labs</a>
+					<div class="nav-collapse">
+						<ul class="nav">
+							<li class="active">
+								<a href="#">主页</a>
+							</li>
+							<li>
+								<a href="#">使用帮助</a>
+							</li>
+							<li>
+								<a href="#">关于我们</a>
+							</li>
+						</ul>
+						<ul class="nav pull-right">
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+									<i class="icon-user-large"></i> Susen <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">
+											<div class="row-fluid account-group">
+												<div class="span4 avatar-container"><img alt="Susen" src="assets/img/avatar-demo.jpg" class="size32"></div>
+												<div class="span8"><strong>苏森</strong><span class="metadata">View Profiles</span></div>
+											</div>
+										</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<a href="#">Settings</a>
+									</li>
+									<li>
+										<a href="#">Sign out</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="span8">
+					<div id="task-status">
+						<section>
+							<h2>任务信息</h2>
+							<p>这里是本任务的信息。</p>
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>#</th><th>程序名称</th><th>提交时间</th><th>运行状态</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td><td>helloworld.cc</td><td>2012-04-23 13:11:44</td><td><span class="label label-success">Accepted</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</section>
+						<section id="code-area">
+							<h2>任务代码</h2>
+							<p>这里是本任务的代码。</p>
+							<div id="task-code">
+
+<pre class="prettyprint linenums lang-cpp">
+#include&lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  cout &lt;&lt; "Hello, world!";
+  return 0;
+}
+</pre>
+
+							</div>
+							<div id="control-box">
+								<div class="button-wrapper-right">
+									<button id="resubmit-display" type="button" class="btn btn-primary">重新提交</button>
+									<a href="task-status.html" class="btn">返回</a>
+								</div>
+							</div>
+						</section>
+						<section id="resubmit-area" class="display-hidden">
+							<h2>修改代码</h2>
+							<form class="well">
+								<label for="task-content">Updated Code</label>
+								<textarea id="task-content" class="input-xxlarge" rows="8" placeholder="输入作业内容…"></textarea>
+								<span class="help-block">请在上面的文本框中提交新作业的代码。</span>
+								<button type="submit" class="btn btn-primary">提交修改</button>
+								<button id="cancel-submit" type="button" class="btn">取消</button>
+							</form>
+						</section>
+					</div>
+				</div>
+				<div class="span4">
+					<div class="alert alert-block alert-success">
+						<h3>欢迎！</h3>
+						<p>
+							您好，这里是数据结构开放实验平台。
+						</p>
+						<p class="button-wrapper-right">
+							<a href="#" class="btn btn-success">了解更多</a>
+						</p>
+					</div>
+					<div class="well">
+						<ul class="nav nav-list">
+							<li class="nav-header">
+								实验系统
+							</li>
+							<li>
+								<a href="index.html"><i class="icon-home"></i> 个人主页</a>
+							</li>
+							<li>
+								<a href="project-list.html"><i class="icon-th-list"></i> 实验列表</a>
+							</li>
+							<li class="active">
+								<a href="#"><i class="icon-tasks icon-white"></i> 作业状态</a>
+							</li>
+							<li class="nav-header">
+								算法学习
+							</li>
+							<li>
+								<a href="#"><i class="icon-book"></i> 算法 Wiki</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="bootstrap/js/jquery.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+		<script type="text/javascript" src="bootstrap/js/google-code-prettify/prettify.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function () {
+			$('.dropdown-toggle').dropdown();
+			prettyPrint();
+
+			// bind events
+			$('#resubmit-display').click(function () {
+				// if ($('#resubmit-area').is(':hidden')) {
+				// 	$(this).html('取消提交');
+				// } else {
+				// 	$(this).html('重新提交');
+				// }
+				$('#code-area').slideToggle(function () {
+					$('#resubmit-area').slideToggle();
+				});
+			});
+
+			$('#cancel-submit').click(function () {
+				$('#resubmit-area').slideToggle(function () {
+					$('#code-area').slideToggle();
+				});
+			})
+		});
+		</script>
+	</body>
+</html>
