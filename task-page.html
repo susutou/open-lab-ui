@@ -2,7 +2,7 @@
 <html lang="zh">
 	<head>
 		<meta charset="utf-8">
-		<title>Projects · Open Labs</title>
+		<title>Tasks · Open Labs</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css">
@@ -132,7 +132,7 @@ int main() {
 								<a href="project-list.html"><i class="icon-th-list"></i> 实验列表</a>
 							</li>
 							<li class="active">
-								<a href="#"><i class="icon-tasks icon-white"></i> 作业状态</a>
+								<a href="task-status.html"><i class="icon-tasks icon-white"></i> 作业状态</a>
 							</li>
 							<li class="nav-header">
 								算法学习
@@ -160,14 +160,14 @@ int main() {
 				// } else {
 				// 	$(this).html('重新提交');
 				// }
-				$('#code-area').slideToggle(function () {
-					$('#resubmit-area').slideToggle();
+				$('#code-area').fadeToggle(function () {
+					$('#resubmit-area').fadeToggle();
 				});
 			});
 
 			$('#cancel-submit').click(function () {
-				$('#resubmit-area').slideToggle(function () {
-					$('#code-area').slideToggle();
+				$('#resubmit-area').fadeToggle(function () {
+					$('#code-area').fadeToggle();
 				});
 			})
 		});
